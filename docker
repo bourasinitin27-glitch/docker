@@ -2,4 +2,41 @@
   * Docker is a containerization method in which we can create multiple container and 
     inatll all prequirtes or dependencies for a individual application 
     in a single container and handle them easily in production
+   
+  * Go language is used for build docker 
+  *  Docker is using Namespace Technologies
+     * in porgraming a namespace is a conatiner that groups releted identifiers ( such as
+       variable ,function, class, interface or modules ) under a unique name . its mian 
+       purpose is to avoid name conflicts and improve code organization .
+      
+  
+  * install docker 
+    apt update -y
+    apt install docker.io -y 
+  
+  * check version 
+    docker --version
+    systemctl start docker 
+    systemctl enable docker 
+    
+  * dokcer info -> show the full details of over docker 
+  * Docker container build by any image 
+    so you can pull from docker hub or u can crete also
+      * pull image 
+         docker pull ubuntu:24.04
+      * docker container run ubuntu -> run container in background and exited
+      * docker container ps 
+      * docker container ps -a
+      * docker container start <container_id>
+      * docker container stop <container_id>
+      * docker container remove <container_id>
+      * docker container run -d ubuntu sleep 30
 
+      * docker container run -it ubuntu /bin/bash -> run container in 
+         interactive mode and have bash shell 
+      * docker conatiner run -itd ubuntu /bin/bash -> -d for detach mode 
+      
+
+
+
+ 
