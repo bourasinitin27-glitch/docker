@@ -72,7 +72,9 @@ check with-> docker volume ls
           -> docker volume inspect <vol_id>
 check volume path or mount path of voulme 
           -> /var/lib/docker/volume/vol_id/_data 
-        
+       all data manged by docker 
+now u can add this volume with another container 
+ and saw same data in another container 
  
      
 
