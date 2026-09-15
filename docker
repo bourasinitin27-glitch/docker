@@ -37,6 +37,34 @@
       * docker conatiner run -itd ubuntu /bin/bash -> -d for detach mode 
       
 
+   ###### if u set a password of mysql database conrainer and u wants to attach a existing volume with 
+               new container so u can folow this step ########
+     
+     * create a another  container of mysql 
+     * excute a container with 
+          docker exec -it <container_name> mysql -uroot -p 
+       now u have error and have some "---" semicolon part 
+    * stop running container 
+       with 
+          docker stop <container_id>
+    * run temprory mysql container with existing volume
+       with 
+          docker run -rm -d --name mysql -reset -v <vol_id>:/var/lib/mysql mysql:8.0 --skip-grant-tabels
 
-
+    * docker ps
  
+    * enter in nwe temprory container 
+       with 
+          docker exec -it mysql -reset mysql
+    * now u r in new temprory mysql container 
+   
+      enter in  container -> FLUSH PRIVILIEGES;
+          then 
+              ALTER USER "   " semicolon part IDENTIFIED BY 'YOUR NEW PASSOWD ';  now press enter
+now u can enter with your new password in original container 
+        
+############# ...........##############
+
+         
+
+      
