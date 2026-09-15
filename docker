@@ -92,5 +92,18 @@ services:
 -> docker compose down 
  for delete container
 
+docker yaml file for multiple container
 
+version:  "3.8"
+services:
+  webapp:
+    image:  nginx
+    ports: 
+      - "8000:80"
+
+  webapp1:
+    image:  nginx
+    ports: 
+      - "8001:80"
+ with this configuration u can create two container
  
