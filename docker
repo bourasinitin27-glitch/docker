@@ -66,5 +66,14 @@ now u can enter with your new password in original container
 ############# ...........##############
 
          
+####### when u create a container by default create a volume also 
+  
+check with-> docker volume ls 
+          -> docker volume inspect <vol_id>
+check volume path or mount path of voulme 
+          -> /var/lib/docker/volume/vol_id/_data 
+        
+ 
+     
 
-      
+ 
