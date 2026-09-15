@@ -75,7 +75,22 @@ check volume path or mount path of voulme
        all data manged by docker 
 now u can add this volume with another container 
  and saw same data in another container 
- 
+
+##### docker compose ####
+docker yaml file to create container
+
+version:  "3.8"
+services:
+  webapp:
+    image:  nginx
+    ports: 
+      - "8000:80" 
      
+-> docker compose up -d 
+  to create container
+
+-> docker compose down 
+ for delete container
+
 
  
