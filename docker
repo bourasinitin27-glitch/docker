@@ -78,6 +78,12 @@ now u can add this volume with another container
 
 ##### docker compose ####
 docker yaml file to create container
+create one directroies
+-> mkdir docker-compose
+cd docker-compose
+-> make one file with same name 
+docker-compose.yml
+
 
 version:  "3.8"
 services:
@@ -106,4 +112,13 @@ services:
     ports: 
       - "8001:80"
  with this configuration u can create two container
+
+if u wants to create a yml file with another name
+so u can 
+but with this change you run up command like this 
+  -> docker compose -f <your_file_name> up -d
+or to down container
+ -> docker compose -f <your_file_name> down
+
+
  
