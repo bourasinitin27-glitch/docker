@@ -121,4 +121,69 @@ or to down container
  -> docker compose -f <your_file_name> down
 
 
+###### breif description of dockerfile ######
+when u deploye a application on server . dockerfile is play a importanat role in this process 
+├── package.json
+├── package-lock.json
+├── node_modules/
+├── server.js
+├── routes/
+├── controllers/
+└── public/  
+if we have project file like this
+
+     for node  for python  for java
+        |         |           |
+FROM node:20/python:3.12/eclipse-temuric:21
+    
+WORKDIR /app  -> working directories in docker container
  
+COPY package*.json ./ -> copy all package.json filoe in ./ directories 
+
+RUN npn install 
+    -> install npm in docker container
+    -> after install npm you have one extra directories called node_modules/
+    -> all requireds package are avaliable in this modules or file 
+ 
+COPY . .
+   -> now we can copy all file in ./ directories 
+EXPOSE 3000
+  -> application run in container 3000 port no.
+ 
+CMD ["npm", "start"]  
+  -> cmd is use when container have in running mode install npm and start it .
+
+****simple way to understand dockerfile to node.js backend app no database no frontend
+
+1. FROM node:20
+   ↓
+   Node.js 20 wala environment lo.
+
+2. WORKDIR /app
+   ↓
+   Application ke liye /app directory use karo.
+
+3. COPY package*.json ./
+   ↓
+   Dependencies ki information container mein lao.
+
+4. RUN npm install
+   ↓
+   Dependencies install karo.
+
+5. COPY . .
+   ↓
+   Ab actual application code container mein lao.
+
+6. EXPOSE 3000
+   ↓
+   App container ke andar port 3000 use karegi.
+
+7. CMD ["npm", "start"]
+   ↓
+   Container start hote hi application start karo.
+
+
+
+
+  
